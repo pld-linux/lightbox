@@ -3,7 +3,7 @@
 Summary:	Simple, unobtrusive script used to overlay images on the webpage
 Name:		lightbox
 Version:	2.04
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications/WWW
 Source0:	http://www.lokeshdhakar.com/projects/lightbox2/releases/%{name}%{version}.zip
@@ -25,10 +25,13 @@ current page. It's a snap to setup and works on all modern browsers.
 %prep
 %setup -qc
 %{__sed} -i -e 's,\r$,,' *.html
+install -d %{name}
+mv css images js *.html %{name}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_appdir}
+cp -a %{name}/* $RPM_BUILD_ROOT%{_appdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
