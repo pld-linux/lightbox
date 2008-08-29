@@ -4,7 +4,7 @@ Summary:	Simple, unobtrusive script used to overlay images on the webpage
 Name:		lightbox
 Version:	2.04
 Release:	0.2
-License:	GPL
+License:	Creative Commons Attribution 2.5
 Group:		Applications/WWW
 Source0:	http://www.lokeshdhakar.com/projects/lightbox2/releases/%{name}%{version}.zip
 # Source0-md5:	c930f97a5791f202d7c48303de36f282
