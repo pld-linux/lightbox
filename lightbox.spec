@@ -3,11 +3,12 @@
 Summary:	Simple, unobtrusive script used to overlay images on the webpage
 Name:		lightbox
 Version:	2.04
-Release:	0.3
+Release:	0.4
 License:	Creative Commons Attribution 2.5
 Group:		Applications/WWW
 Source0:	http://www.lokeshdhakar.com/projects/lightbox2/releases/%{name}%{version}.zip
 # Source0-md5:	c930f97a5791f202d7c48303de36f282
+Patch0:		%{name}-url.patch
 URL:		http://www.lokeshdhakar.com/projects/lightbox2/
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildArch:	noarch
@@ -27,6 +28,9 @@ current page. It's a snap to setup and works on all modern browsers.
 %{__sed} -i -e 's,\r$,,' *.html
 install -d %{name}
 mv css images js *.html %{name}
+
+%patch0 -p1
+
 cat > apache.conf <<'EOF'
 Alias /%{name} %{_appdir}
 <Directory %{_appdir}>
