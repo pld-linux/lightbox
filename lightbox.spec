@@ -11,6 +11,7 @@ Source0:	http://www.lokeshdhakar.com/projects/lightbox2/releases/%{name}%{versio
 Patch0:		%{name}-url.patch
 URL:		http://www.lokeshdhakar.com/projects/lightbox2/
 BuildRequires:	rpmbuild(macros) >= 1.268
+BuildRequires:	unzip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
