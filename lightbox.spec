@@ -2,12 +2,12 @@
 # - system prototype.js, scriptaculous.js
 Summary:	Simple, unobtrusive script used to overlay images on the webpage
 Name:		lightbox
-Version:	2.04
+Version:	2.05
 Release:	0.4
 License:	Creative Commons Attribution 2.5
 Group:		Applications/WWW
 Source0:	http://www.lokeshdhakar.com/projects/lightbox2/releases/%{name}%{version}.zip
-# Source0-md5:	c930f97a5791f202d7c48303de36f282
+# Source0-md5:	af6efdeba0a51e27b077737889ffb60a
 Patch0:		%{name}-url.patch
 URL:		http://www.lokeshdhakar.com/projects/lightbox2/
 BuildRequires:	rpmbuild(macros) >= 1.268
