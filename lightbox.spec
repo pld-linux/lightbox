@@ -30,7 +30,7 @@ current page. It's a snap to setup and works on all modern browsers.
 install -d %{name}
 mv css images js *.html %{name}
 
-%patch0 -p1
+%patch -P0 -p1
 
 cat > apache.conf <<'EOF'
 Alias /%{name} %{_appdir}
